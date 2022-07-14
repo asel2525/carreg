@@ -1,3 +1,4 @@
+from tabnanny import verbose
 from django.db import models
 
 class Brand(models.Model):
@@ -6,3 +7,4 @@ class Brand(models.Model):
 class Mark(models.Model):
     brand = models.ForeignKey(Brand, on_delete=models.CASCADE, related_name='marks')
     name = models.CharField(max_length=128)
+
